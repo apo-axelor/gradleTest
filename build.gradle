@@ -10,7 +10,29 @@
   }
 }
 apply plugin: 'java'
+apply plugin : 'war'
+apply plugin 'eclipse plugin
+plugins {
+    id 'eclipse'
+}
+plugins {
+    id 'war'
+}
+plugins {
+    id 'java-gradle-plugin'
+}
 
+gradlePlugin {
+    plugins {
+        myPlugins {
+            id = 'my-plugin'
+            implementationClass = 'my.MyPlugin'
+        }
+    }
+    
+}plugins {
+    id 'my-plugin'
+}
 repositories {
    mavenCentral()
 }
